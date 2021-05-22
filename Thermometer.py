@@ -1,4 +1,5 @@
-from main import MeasureInstrument
+from MeasureInstrument import MeasureInstrument
+
 
 class Thermometer(MeasureInstrument):
     def __init__(self, price, country, material, producer, measure_time, max_temp, kind):
@@ -7,5 +8,5 @@ class Thermometer(MeasureInstrument):
         self.kind = kind
 
     def __repr__(self):
-        return repr((self._MeasureInstrument__price, self.measure_time, self.producer, self.country,
+        return repr((self.price, self.measure_time, self.producer, self.country,
                      self.max_temp, self.kind))

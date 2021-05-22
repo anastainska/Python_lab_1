@@ -1,4 +1,5 @@
-from main import MeasureInstrument
+from MeasureInstrument import MeasureInstrument
+
 
 class Calorimeter(MeasureInstrument):
     def __init__(self, price, country, material, producer, measure_time, max_heat):
@@ -6,5 +7,5 @@ class Calorimeter(MeasureInstrument):
         self.max_heat = max_heat
 
     def __repr__(self):
-        return repr((self._MeasureInstrument__price, self.measure_time, self.producer, self.country,
+        return repr((self.price, self.measure_time, self.producer, self.country,
                      self.max_heat))
