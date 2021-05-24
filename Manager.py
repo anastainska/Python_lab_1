@@ -2,8 +2,8 @@ from enum import Enum
 
 
 class SortOrder(Enum):
-    ASC = 1
-    DESC = 2
+    ASC = False
+    DESC = True
 
 
 class MeasureInstrumentManager:
@@ -19,12 +19,6 @@ class MeasureInstrumentManager:
         return result
 
     def sort_by_price(self, order: SortOrder):
-        result = []
         self.items.sort(key=lambda i: i.price, reverse=order.value)
-        result.append(self.items)
+        result = self.items
         return result
-
-
-class SortOrder(Enum):
-    ASC = False
-    DESC = True
